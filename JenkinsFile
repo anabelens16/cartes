@@ -35,8 +35,9 @@ pipeline {
         	steps{
         	  	bat "deliver.bat"
         	}
-   }
-   	post{
+    }
+    }
+   			post{
             	always {
             		echo "pipeline finished!"
             	}
@@ -51,4 +52,4 @@ pipeline {
             	}
         	}
       
-}}
+}
