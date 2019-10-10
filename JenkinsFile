@@ -25,7 +25,16 @@ pipeline {
         	steps{
         	  	bat "mvn test"
         	}
-    	} 
+    	}
+    	stage('package'){
+        	steps{
+        	  	bat "mvn -DskipTests package"
+        	} 
+        }
+    	stage('deliver'){
+        	steps{
+        	  	echo "TODO: deliver"
+        	}
    }
    	post{
             	always {
@@ -35,7 +44,7 @@ pipeline {
             		echo "Du changement en pipeline"
             	}
             	failure {
-            		echo "Pas bon le pipeline"
+            		echo "Pas bon le pipeline"s
             	}
             	success {
             		echo "1 super gommette pour le pipeline"
