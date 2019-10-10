@@ -6,6 +6,7 @@ pipeline {
             steps{
                 bat "mvn clean compile"
             }
+            
             post{
             	always {
             		echo "build staged finished!"
@@ -35,21 +36,21 @@ pipeline {
         	steps{
         	  	bat "deliver.bat"
         	}
+
+   		}
     }
-    }
-   			post{
-            	always {
-            		echo "pipeline finished!"
-            	}
-            	changed {
-            		echo "Du changement en pipeline"
-            	}
-            	failure {
-            		echo "Pas bon le pipeline"s
-            	}
-            	success {
-            		echo "1 super gommette pour le pipeline"
-            	}
+    post{
+        	always {
+        		echo "pipeline finished!"
         	}
-      
+        	changed {
+        		echo "Du changement en pipeline"
+        	}
+        	failure {
+        		echo "Pas bon le pipeline"s
+        	}
+        	success {
+        		echo "1 super gommette pour le pipeline"
+        	}
+    }
 }
