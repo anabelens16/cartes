@@ -50,4 +50,3 @@ pipeline {
             		echo "1 super gommette pour le pipeline"
             	}
         	}
-}
