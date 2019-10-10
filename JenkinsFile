@@ -47,7 +47,7 @@ pipeline {
         		echo "Du changement en pipeline"
         	}
         	failure {
-        		echo "Pas bon le pipeline"s
+        		echo "Pas bon le pipeline"
         	}
         	success {
         		echo "1 super gommette pour le pipeline"
