@@ -8,7 +8,7 @@
 <head>
 <meta charset="UTF-8">
 <title>Super Poker Las Vegas</title>
-
+<link rel="stylesheet" type="text/css" href="css/main.css">
 </head>
 <body>
 <% 
@@ -16,7 +16,7 @@
 	JeuCarte jeu = (JeuCarte) session.getAttribute("jeu");
 %>
 <main>
-<link rel="stylesheet" type="text/css" href="css/main.css">
+
 <section>
 <a href=""><img id="deck" src="images/dos-carte.png" alt="deck"></a>
 <p>Nombre de cartes : <%=jeu.taille() %></p>
